@@ -5,7 +5,7 @@ WORKDIR /app/backend
 COPY project1/django-notes-app-main/requirements.txt /app/backend
 RUN pip install -r requirements.txt
 
-COPY . /app/backend
+COPY project1/django-notes-app-main/ /app/backend
 
 EXPOSE 8000
 
