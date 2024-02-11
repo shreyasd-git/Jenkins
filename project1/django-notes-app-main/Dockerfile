@@ -2,7 +2,7 @@ FROM python:3.9
 
 WORKDIR /app/backend
 
-COPY /var/lib/jenkins/workspace/DjangoNotesapp/project1/django-notes-app-main/requirements.txt /app/backend
+COPY project1/django-notes-app-main/requirements.txt /app/backend
 RUN pip install -r requirements.txt
 
 COPY . /app/backend
