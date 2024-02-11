@@ -19,7 +19,7 @@ pipeline {
         
         stage("Pushing to DockerHub"){
             steps{
-                echo "Pushig img to Docker Hub"
+                echo "Pushing img to Docker Hub"
                 withCredentials([usernamePassword(credentialsId: 'DockerHub', passwordVariable: 'DockerHubPass', usernameVariable: 'DockerHubUser')])
                 {
                     sh "docker tag my-notes-app1 ${env.DockerHubUser}/my-notes-app1:latest"
